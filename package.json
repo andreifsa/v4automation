@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "cypress": "^13.15.0"
+  },
+
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:open:mobile": "cypress run --config viewportWidth=410,viewportHeight=860",
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreifsa/v4automation"
+  }
+}
