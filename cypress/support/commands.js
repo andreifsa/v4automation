@@ -35,13 +35,11 @@ Cypress.Commands.add("fillMandatoryFieldsAndSubmit", (email, firstName, lastName
     cy.get('input[name="street[0]"]').type(address)
     cy.get('[name="shippingAddress.city"] > .label > span').type(city)
     cy.get('select[name="region_id"]').then(($select) => {
-        // Verifica se o elemento é encontrado
-        console.log('Element found:', $select.length);
-        cy.wrap($select).select(state); // Seleciona a opção se encontrada
+        cy.wrap($select).select(state);
       });
     cy.get('[name="shippingAddress.postcode"] > .label > span').type(zipCode)
     cy.get('[name="shippingAddress.telephone"] > label.label > span').type(phone)
     cy.get(':nth-child(1) > :nth-child(1) > .radio').click()
-    // cy.get('.button').click()
-    // cy.get('.success').should('be.visible')
+    cy.get('.button').click()
+
 });
